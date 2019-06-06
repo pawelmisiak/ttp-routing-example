@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Users from "./Users";
 import Contact from "./Contact";
+import NotFound from "./NotFound";
 import * as serviceWorker from "./serviceWorker";
 
 const routing = (
@@ -21,9 +22,12 @@ const routing = (
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
-      <Route exact path="/" component={App} />
-      <Route path="/users" component={Users} />
-      <Route path="/contact" component={Contact} />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/users" component={Users} />
+        <Route path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
     </div>
   </Router>
 );
