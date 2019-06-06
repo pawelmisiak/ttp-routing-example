@@ -13,18 +13,19 @@ const routing = (
     <div>
       <ul>
         <li>
-          <Link to="/">Home </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/users">Users </Link>
+          <Link to="/users">Users</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
+      <hr />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/users" component={Users} />
+        <Route exact path="/users" component={Users} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
