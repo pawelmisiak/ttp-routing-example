@@ -1,18 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
-import Users from "./Users";
-import Contact from "./Contact";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Users />
-        <Contact />
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Home</h1>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;

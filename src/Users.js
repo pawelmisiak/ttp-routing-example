@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.css";
 
 class Users extends Component {
   constructor(props) {
@@ -6,7 +7,13 @@ class Users extends Component {
     this.state = {};
   }
   render() {
-    return <h1>Users</h1>;
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Users</h1>
+        </header>
+      </div>
+    );
   }
 }
 
